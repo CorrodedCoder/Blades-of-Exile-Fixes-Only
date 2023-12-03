@@ -57,6 +57,11 @@ OPENFILENAME ofn;
 	OFSTRUCT store;
 Boolean suppress_load_file_name = FALSE;
 
+short FSWrite(HFILE file, long* len, char* buffer);
+short FSRead(HFILE file, long* len, char* buffer);
+short SetFPos(HFILE file, short mode, long len);
+
+
 void print_write_position ();
 
 void file_initialize()
