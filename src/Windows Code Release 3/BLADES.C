@@ -483,7 +483,8 @@ short old_setting,new_setting;
 			check_cd_event(hwnd,message,wParam,lParam);
 			else {
 				SetFocus(hwnd);
-				press = MAKEPOINT(lParam);
+				press.x = LOWORD(lParam);
+				press.y = HIWORD(lParam);
 				if (in_startup_mode == FALSE)
 					All_Done = handle_action(press, wParam,lParam);
 					else All_Done = handle_startup_press(press);
@@ -499,7 +500,8 @@ short old_setting,new_setting;
 			check_cd_event(hwnd,message,wParam,lParam);
 			else {
 				SetFocus(hwnd);
-				press = MAKEPOINT(lParam);
+				press.x = LOWORD(lParam);
+				press.y = HIWORD(lParam);
 				if (in_startup_mode == FALSE)
 					All_Done = handle_action(press, wParam,-2);
 					else All_Done = handle_startup_press(press);
@@ -559,7 +561,8 @@ short old_setting,new_setting;
 		if (store_mouse != lParam)
 			cursor_stay();
 		store_mouse = lParam;
-		press = MAKEPOINT(lParam);
+		press.x = LOWORD(lParam);
+		press.y = HIWORD(lParam);
 		if (hwnd == mainPtr) {
 			change_cursor(press);
 			if ((overall_mode > 10) && (overall_mode < 20) && (party.stuff_done[181][6] == 0))
