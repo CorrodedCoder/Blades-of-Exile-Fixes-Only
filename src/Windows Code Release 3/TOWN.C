@@ -1705,7 +1705,7 @@ void draw_map (HWND the_dialog, short the_item)
 
 
 
-BOOL FAR PASCAL _export map_dialog_proc
+BOOL FAR PASCAL map_dialog_proc
 	(HWND hDlg, UINT message, UINT wParam, LONG lParam) {
 	short i,which_d,store_which;
 	char item_str[256];

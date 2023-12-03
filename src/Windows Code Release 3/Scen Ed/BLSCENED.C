@@ -151,7 +151,7 @@ Boolean block_erase = FALSE;
 
 
 
-long FAR PASCAL _export WndProc (HWND, UINT, UINT, LONG);
+long FAR PASCAL WndProc (HWND, UINT, UINT, LONG);
 Boolean handle_menu (short, HMENU);
 
 int PASCAL WinMain (hInstance,hPrevInstance,
@@ -293,7 +293,7 @@ int nCmdShow;
 		return msg.wParam;
 }
 
-long FAR PASCAL _export WndProc (hwnd,message,wParam,lParam)
+long FAR PASCAL WndProc (hwnd,message,wParam,lParam)
 HWND hwnd;
 UINT message;
 UINT wParam;
