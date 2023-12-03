@@ -23,7 +23,7 @@ if (MSVC)
 		-DNOMINMAX
 		-D_CRT_DECLARE_NONSTDC_NAMES=0
 		# Fake OF_SEARCH, even though this will not be honoured
-		-DOF_SEARCH=0x0400
+		-DOF_SEARCH=0x0000
 	)
 endif()
 
