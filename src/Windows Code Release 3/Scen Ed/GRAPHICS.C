@@ -1622,26 +1622,6 @@ void get_str(char *str,short i, short j)
 	p2c(str);
 }
 
-short string_length(char *str)
-{
-	short text_len[257];
-	short total_width = 0,i,len;
-	char p_str[256];
-	
-	for (i = 0; i < 257; i++)
-		text_len[i]= 0;
-	
-	strcpy((char *) p_str,str);
-	c2p(p_str);
-	MeasureText(256,p_str,text_len,main_dc);
-	len = strlen((char *)str);
-	
-	for (i = 0; i < 257; i++)
-		if ((text_len[i] > total_width) && (i <= len))
-			total_width = text_len[i];
-	return total_width;
-}
-
 void undo_clip(HDC hdc)
 {
  //	RECT overall_rect = {0,0,530,435};
