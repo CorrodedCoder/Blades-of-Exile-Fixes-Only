@@ -352,4 +352,4 @@ void Delay(short val,long *dummy);
 short max(short a,short b);
 short min(short a,short b);
 short minmax(short min,short max,short k);
-short abs(short x);
+short ex_abs(short x);

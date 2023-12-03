@@ -2878,7 +2878,7 @@ short can_see(location p1,location p2,short mode)
 	dx = p2.x - p1.x;
 	dy = p2.y - p1.y;
 	
-	if (abs(dy) > abs(dx)) {
+	if (ex_abs(dy) > ex_abs(dx)) {
 		if (p2.y > p1.y) {
 			for (count = 1; count < dy; count++) {
 				storage = storage + get_obscurity(p1.x + (count * dx) / dy, p1.y + count);

@@ -58,7 +58,7 @@ short minmax(short min,short max,short k)
 	return k;
 }
 
-short abs(short x)
+short ex_abs(short x)
 {
 	if (x < 0)
 		return x * -1;
