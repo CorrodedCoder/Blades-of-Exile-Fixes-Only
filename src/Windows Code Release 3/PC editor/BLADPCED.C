@@ -292,7 +292,7 @@ HDC hdc;
 PAINTSTRUCT ps;
 RECT rect;
 short cxDib, cyDib;
-BYTE huge * lpDibBits;
+BYTE * lpDibBits;
 //RECT s_rect = {0,0,30,30},d_rect = {0,0,30,30},d2 = {0,0,420,216},s2 = {0,0,420,216};
 POINT press;
 short handled = 0;
