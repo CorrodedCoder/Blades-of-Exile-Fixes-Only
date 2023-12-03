@@ -434,7 +434,7 @@ RECT r;
 		return 0;
 
 	case WM_VSCROLL:
-		which_sbar = GetWindowLong(lParam, GWL_ID);
+		which_sbar = GetWindowLong((HWND)lParam, GWL_ID);
 		switch (which_sbar) {
 			case 1:
 				sbar_pos = GetScrollPos(right_sbar,SB_CTL);

@@ -170,7 +170,7 @@ short store_pc_being_created;
 HWND	mainPtr;
 HWND force_dlog = NULL;
 HFONT font,fantasy_font,small_bold_font,italic_font,underline_font,bold_font,tiny_font;
-FARPROC modeless_dlogprocs[18] = {NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+DLGPROC modeless_dlogprocs[18] = {NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
 								NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
 								NULL,	NULL,	NULL,	NULL,	NULL,	NULL};
 HBITMAP bmap = NULL;
@@ -641,7 +641,7 @@ short old_setting,new_setting;
 		return 0;
 
 	case WM_VSCROLL:
-		which_sbar = GetWindowLong(lParam, GWL_ID);
+		which_sbar = GetWindowLong((HWND)lParam, GWL_ID);
 		switch (which_sbar) {// 1 text  2 items  3 shop
 			case 1:
 				sbar_pos = GetScrollPos(text_sbar,SB_CTL);
