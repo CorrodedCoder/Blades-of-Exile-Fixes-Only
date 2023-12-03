@@ -2467,7 +2467,7 @@ void draw_targeting_line(POINT where_curs)
 			if ((loc_off_act_area(which_space) == FALSE) && 
 				(can_see(from_loc,which_space,0) < 5)
 			 && (dist(from_loc,which_space) <= current_spell_range)) {
-				SetViewportOrg(  main_dc,ulx,uly);
+				SetViewportOrgEx(  main_dc,ulx,uly, NULL);
 				white_pen = CreatePenIndirect(&white_pen_data);
 				store_pen = SelectObject(main_dc,white_pen);
 

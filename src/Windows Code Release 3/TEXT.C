@@ -1682,7 +1682,7 @@ void WinDrawString(char *string,short x,short y)
 
 	hdc = GetDC(mainPtr);
 	SelectPalette(hdc,hpal,0);
- 	SetViewportOrg(hdc,ulx,uly);
+ 	SetViewportOrgEx(hdc,ulx,uly, NULL);
 	SelectObject(hdc,small_bold_font);
 	SetBkMode(hdc,TRANSPARENT);
 	SetTextColor(hdc,PALETTEINDEX(c[1]));
@@ -1696,7 +1696,7 @@ void WinBlackDrawString(char *string,short x,short y)
 
 	hdc = GetDC(mainPtr);
 	SelectPalette(hdc,hpal,0);
- 	SetViewportOrg(hdc,ulx,uly);
+ 	SetViewportOrgEx(hdc,ulx,uly, NULL);
 	SelectObject(hdc,small_bold_font);
 	SetBkMode(hdc,TRANSPARENT);
 	DrawString(string,x,y,hdc);
