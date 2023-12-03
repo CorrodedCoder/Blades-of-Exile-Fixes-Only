@@ -27,7 +27,7 @@ extern HWND mainPtr;
 extern HPALETTE hpal;
 extern HDC main_dc;
 extern HANDLE store_hInstance;
-long FAR PASCAL WndProc (HWND, UINT, UINT, LONG);
+LRESULT CALLBACK  WndProc (HWND, UINT, WPARAM, LPARAM);
 extern Boolean modeless_exists[18];
 extern HWND modeless_dialogs[18];
 extern HBRUSH bg[14];

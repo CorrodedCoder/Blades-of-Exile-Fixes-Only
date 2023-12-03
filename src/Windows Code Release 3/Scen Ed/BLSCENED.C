@@ -151,7 +151,7 @@ Boolean block_erase = FALSE;
 
 
 
-long FAR PASCAL WndProc (HWND, UINT, UINT, LONG);
+LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM);
 Boolean handle_menu (short, HMENU);
 
 int PASCAL WinMain (hInstance,hPrevInstance,
@@ -293,11 +293,11 @@ int nCmdShow;
 		return msg.wParam;
 }
 
-long FAR PASCAL WndProc (hwnd,message,wParam,lParam)
+LRESULT CALLBACK WndProc (hwnd,message,wParam,lParam)
 HWND hwnd;
 UINT message;
-UINT wParam;
-LONG lParam;
+WPARAM wParam;
+LPARAM lParam;
 {
 HDC hdc;
 PAINTSTRUCT ps;

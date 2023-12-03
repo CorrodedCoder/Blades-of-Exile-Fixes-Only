@@ -23,7 +23,7 @@ extern HWND mainPtr;
 extern HPALETTE hpal;
 extern HDC main_dc;
 extern HANDLE store_hInstance;
-long FAR PASCAL WndProc (HWND, UINT, UINT, LONG);
+LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM);
 
 
 extern short far terrain_pic[256];
