@@ -17,7 +17,7 @@ include(cmake/PreventInSourceBuilds.cmake)
 
 if (MSVC)
 	# Disable complaints about not using MS's "secure" versions of CRT functions.
-	add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+	add_definitions(-D_CRT_SECURE_NO_WARNINGS -DNOMINMAX -D_CRT_DECLARE_NONSTDC_NAMES=0)
 endif()
 
 add_subdirectory(src)
