@@ -16,8 +16,15 @@ project (
 include(cmake/PreventInSourceBuilds.cmake)
 
 if (MSVC)
-	# Disable complaints about not using MS's "secure" versions of CRT functions.
-	add_definitions(-D_CRT_SECURE_NO_WARNINGS -DNOMINMAX -D_CRT_DECLARE_NONSTDC_NAMES=0)
+	add_definitions(
+		# Disable complaints about not using MS's "secure" versions of CRT functions.
+		-D_CRT_SECURE_NO_WARNINGS
+		# Disable min/max macros so they don't interfere with existing functions
+		-DNOMINMAX
+		-D_CRT_DECLARE_NONSTDC_NAMES=0
+		# Fake OF_SEARCH, even though this will not be honoured
+		-DOF_SEARCH=0x0400
+	)
 endif()
 
 add_subdirectory(src)
