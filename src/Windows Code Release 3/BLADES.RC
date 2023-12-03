@@ -7,6 +7,7 @@ produced by Borland Resource Workshop
 
 
 *****************************************************************************/
+#include <WinUser.h>
 
 #define CURSOR_1	1
 #define WAVE	100
