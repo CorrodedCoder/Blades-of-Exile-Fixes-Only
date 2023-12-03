@@ -8,7 +8,7 @@ add_executable (Scen-Ed WIN32
 	dlogtool.c
 	scenario.c
 	tfileio.c
-	townout.c
+	townout_stub.c
 	global.c
 	buttonmg.c
 	BLSCENED.RC
