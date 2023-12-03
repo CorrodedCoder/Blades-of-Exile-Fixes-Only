@@ -44,7 +44,7 @@ extern short town_size[3];
 extern short town_type;
 	extern FARPROC modeless_dlogprocs[18];
 extern short dialog_answer;
-extern pascal Boolean cd_event_filter();
+extern Boolean cd_event_filter();
 extern Boolean dialog_not_toast;
 extern HBITMAP pcs_gworld;
 extern HDC main_dc,main_dc2,main_dc3;

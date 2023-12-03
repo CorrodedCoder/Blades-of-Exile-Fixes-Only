@@ -36,7 +36,7 @@ extern unsigned char far combat_terrain[64][64];
 extern outdoor_record_type far outdoors[2][2];
 extern unsigned char far misc_i[64][64];
 extern short store_current_pc,current_ground;
-extern pascal Boolean cd_event_filter();
+extern Boolean cd_event_filter();
 extern Boolean dialog_not_toast;
 
 extern short store_pre_shop_mode,store_pre_talk_mode;

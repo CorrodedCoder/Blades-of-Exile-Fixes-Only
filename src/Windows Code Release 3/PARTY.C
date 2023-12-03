@@ -133,7 +133,7 @@ extern	unsigned char m3[16];
 extern stored_outdoor_maps_type far o_maps;
 extern short current_ground,dialog_answer;
 extern short on_spell_menu[2][62];
-extern pascal Boolean cd_event_filter();
+extern Boolean cd_event_filter();
 extern Boolean dialog_not_toast;
 extern short far mage_need_select[62];
 extern short far priest_need_select[62];
