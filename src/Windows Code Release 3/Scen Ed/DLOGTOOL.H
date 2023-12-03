@@ -47,7 +47,6 @@ void draw_dialog_graphic(HWND hDlg, RECT rect, short which_g, Boolean do_frame,s
 void showcursor(Boolean a);
 
 void cd_get_text_edit_str(short dlog_num, char *str);
-void cd_set_text_edit_str(short dlog_num, char *str);
 void cdsin(short dlog_num, short item_num, short num); 
 void csit(short dlog_num, short item_num, char *str);
 void csp(short dlog_num, short item_num, short pict_num);
