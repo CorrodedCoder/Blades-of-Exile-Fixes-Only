@@ -641,7 +641,7 @@ short old_setting,new_setting;
 		return 0;
 
 	case WM_VSCROLL:
-		which_sbar = GetWindowWord(HIWORD (lParam), GWW_ID);
+		which_sbar = GetWindowLong(lParam, GWL_ID);
 		switch (which_sbar) {// 1 text  2 items  3 shop
 			case 1:
 				sbar_pos = GetScrollPos(text_sbar,SB_CTL);
