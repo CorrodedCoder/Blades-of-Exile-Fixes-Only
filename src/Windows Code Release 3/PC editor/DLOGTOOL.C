@@ -605,7 +605,7 @@ BOOL FAR PASCAL dummy_dialog_proc
 				//	flag = 2;
 				str_stored = TRUE;
 				}
-			else sscanf(item_str,"%d_%d",&type,&flag);
+			else sscanf(item_str,"%hd_%hd",&type,&flag);
 
 			free_item = -1;
 			// find free item
