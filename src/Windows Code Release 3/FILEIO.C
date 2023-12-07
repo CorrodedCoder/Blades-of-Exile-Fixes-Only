@@ -2098,15 +2098,27 @@ void flip_short(short *s)
 
 }
 
+void BoeAlterRect(BoeRect* r)
+{
+	short a;
 
-void flip_rect(RECT *s)
+	a = r->top;
+	r->top = r->left;
+	r->left = a;
+	a = r->bottom;
+	r->bottom = r->right;
+	r->right = a;
+}
+
+
+void flip_rect(BoeRect *s)
 {
 	flip_short((short *) &(s->top));
 	flip_short((short *) &(s->bottom));
 	flip_short((short *) &(s->left));
 	flip_short((short *) &(s->right));
-	alter_rect(s);
-	}
+	BoeAlterRect(s);
+}
 
 short FSWrite(HFILE file,long *len,char *buffer)
 {

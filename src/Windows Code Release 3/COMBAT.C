@@ -320,7 +320,7 @@ void start_outdoor_combat(outdoor_creature_type encounter,unsigned char in_which
 	short i,j,r1,r2,how_many,num_tries = 0;
 	short low[10] = {15,7,3,3,1,1,1,7,2,1};
 	short high[10] = {30,10,5,5,3,2,1,10,4,1};
-	RECT town_rect = {0,0,47,47};
+	BoeRect town_rect = {0,0,47,47};
 	short nums[10];
 
 	for (i = 0; i < 7; i++) 
@@ -3580,7 +3580,7 @@ void place_spell_pattern(effect_pat_type pat,location center,short type,Boolean 
 	unsigned char effect;
 	location spot_hit;
 	location s_loc,loc;
-	RECT active;
+	BoeRect active;
 	creature_data_type *which_m;
 	Boolean monster_hit = FALSE;
 	
@@ -4546,7 +4546,7 @@ void process_fields()
 	short i,j,k,l,m,r1;
 	location loc;
 	char qf[64][64];
-	RECT r;
+	BoeRect r;
 
 	if (is_out())
 		return;
