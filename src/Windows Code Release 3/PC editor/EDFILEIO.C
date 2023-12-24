@@ -55,16 +55,16 @@ short display_mode = 0;
 
 void file_initialize()
 {
-static char *szFilter[] = {"Blades of Exile Save Files (*.SAV)","*.sav",
-		"Text Files (*.TXT)","*.txt",
-		"All Files (*.*)","*.*",
-		""};
+static const char szFilter[] = {"Blades of Exile Save Files (*.SAV)\0" "*.sav\0"
+		"Text Files (*.TXT)\0" "*.txt\0"
+		"All Files (*.*)\0" "*.*\0"
+		};
 
 
 		ofn.lStructSize = sizeof(OPENFILENAME);
 		ofn.hwndOwner = mainPtr;
 		ofn.hInstance = NULL;
-		ofn.lpstrFilter = szFilter[0];
+		ofn.lpstrFilter = szFilter;
 		ofn.lpstrCustomFilter = NULL;
 		ofn.nMaxCustFilter = 0;
 		ofn.nFilterIndex = 0;
