@@ -1494,8 +1494,8 @@ void check_cd_event(HWND hwnd,UINT message,UINT wparam,LONG lparam)
 	switch (message) {
 		case WM_COMMAND:
 			// pare out command messages sent from text box
-			if (wparam == 150)
-         	break;
+			if (LOWORD(wparam) == 150)
+         		break;
 			cd_find_dlog(hwnd,&wind_hit,&item_hit); // item_hit is dummy
 			item_hit = (short) wparam;
 			break;

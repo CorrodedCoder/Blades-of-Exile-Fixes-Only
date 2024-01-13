@@ -783,9 +783,9 @@ short check_cd_event(HWND hwnd,UINT message,UINT wparam,LONG lparam)
 
 	switch (message) {
 		case WM_COMMAND:
-			if ((wparam >= 150) && (wparam <= 250))  {
+			if ((LOWORD(wparam) >= 150) && (LOWORD(wparam) <= 250))  {
 
-				if (HIWORD(lparam) == EN_ERRSPACE)
+				if (HIWORD(wparam) == EN_ERRSPACE)
 					play_sound(0);
 
 				return 0;
